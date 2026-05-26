@@ -1,0 +1,292 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import cv from "../../data/cv.json";
+
+const nav = [
+  { id: "profiles", label: "Profiles" },
+  { id: "about", label: "About" },
+  { id: "research", label: "Research" },
+  { id: "skills", label: "Skills" },
+  { id: "education", label: "Education" },
+  { id: "experience", label: "Experience" },
+  { id: "publications", label: "Publications" },
+  { id: "talks", label: "Talks" },
+  { id: "teaching", label: "Teaching" },
+  { id: "achievements", label: "Achievements" },
+  { id: "contact", label: "Contact" },
+];
+
+const p = cv.person;
+const pdf = cv.meta.pdfPath;
+---
+
+<BaseLayout>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">{p.name}</a>
+      <nav class="site-nav" aria-label="Primary">
+        {nav.map((item) => (
+          <a href={`#${item.id}`}>{item.label}</a>
+        ))}
+      </nav>
+      <a class="btn" href={pdf} download>Download CV</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="home" class="hero">
+      <div class="container">
+        <h1>{p.name}</h1>
+        <p class="degrees">{p.degrees}</p>
+        <p class="role">{p.title}</p>
+        <p class="role">{p.department}</p>
+        <p class="affiliation">{p.affiliation}</p>
+        <div class="contact-row">
+          <a href={`mailto:${p.email}`}>{p.email}</a>
+          <span>{p.phone}</span>
+          <a href={cv.links.scholar} target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          <a href={cv.links.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href={cv.links.youtube} target="_blank" rel="noopener noreferrer">YouTube</a>
+        </div>
+        <div class="hero-actions">
+          <a class="btn" href={pdf} download>Download PDF</a>
+          <a class="btn btn-outline" href="#publications">View publications</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="profiles">
+      <div class="container">
+        <h2 class="section-title">Research profiles</h2>
+        <div class="profile-grid">
+          {cv.profiles.map((profile) => (
+            <article class="profile-card">
+              <p class="label">{profile.label}</p>
+              <p class="id">
+                <a href={profile.url} target="_blank" rel="noopener noreferrer">{profile.id}</a>
+              </p>
+              <p class="hint">{profile.hint}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">Profile</h2>
+        <p>{cv.about}</p>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="container">
+        <h2 class="section-title">Research interests</h2>
+        <div class="tag-list" role="list">
+          {cv.researchInterests.map((tag) => (
+            <span class="tag" role="listitem">{tag}</span>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <h2 class="section-title">Technical skills</h2>
+        {cv.skills.map((skill) => (
+          <div class="skill-row">
+            <div class="skill-label">{skill.label}</div>
+            <div>{skill.detail}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+        <h2 class="section-title">Education</h2>
+        {cv.education.map((e) => (
+          <article class="timeline-item">
+            <div class="period">{e.period}</div>
+            <div>
+              <p class="role">{e.degree}</p>
+              <p class="org">{e.institution}</p>
+              {e.detail && <p class="detail">{e.detail}</p>}
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <h2 class="section-title">Academic appointments and administration</h2>
+        {cv.appointments.map((a) => (
+          <article class="timeline-item">
+            <div class="period">{a.period}</div>
+            <div>
+              <p class="role">{a.role}</p>
+              <p class="org">{a.org}</p>
+              {a.detail && <p class="detail">{a.detail}</p>}
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section id="awards">
+      <div class="container">
+        <h2 class="section-title">Awards and fellowships</h2>
+        {cv.awards.map((a) => (
+          <article class="timeline-item">
+            <div class="period">{a.year}</div>
+            <div>
+              <p class="role">{a.description}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section id="highlights">
+      <div class="container">
+        <h2 class="section-title">Key publications and research highlights</h2>
+        <p class="section-lead">
+          Selected impact-focused works. Full bibliography in <a href={cv.links.scholar}>Google Scholar</a>.
+        </p>
+        {cv.keyPublications.map((pub) => (
+          <article class="highlight-card">
+            <h3>{pub.title}</h3>
+            <p>{pub.summary}</p>
+            <p class="venue">{pub.venue}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="container">
+        <h2 class="section-title">Publications</h2>
+
+        <h3 class="subsection-title">Peer-reviewed publications and book chapters</h3>
+        {cv.publications.peerReviewed.map((pub) => (
+          <article class="pub-item">
+            <div class="pub-year">{pub.year}</div>
+            <p class="pub-citation" set:html={pub.citation} />
+          </article>
+        ))}
+
+        <h3 class="subsection-title">Conference proceedings</h3>
+        {cv.publications.proceedings.map((pub) => (
+          <article class="pub-item">
+            <div class="pub-year">{pub.year}</div>
+            <p class="pub-citation" set:html={pub.citation} />
+          </article>
+        ))}
+
+        <h3 class="subsection-title">Manuscripts under review</h3>
+        {cv.publications.underReview.map((pub) => (
+          <article class="pub-item">
+            <div class="pub-year">{pub.year}</div>
+            <p class="pub-citation" set:html={pub.citation} />
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section id="talks">
+      <div class="container">
+        <h2 class="section-title">Invited talks and service</h2>
+
+        <h3 class="subsection-title">Invited talks and resource person</h3>
+        {cv.talks.invited.map((t) => (
+          <article class="timeline-item">
+            <div class="period">{t.year}</div>
+            <div><p class="detail">{t.text}</p></div>
+          </article>
+        ))}
+
+        <h3 class="subsection-title">Events organised</h3>
+        {cv.talks.organised.map((t) => (
+          <article class="timeline-item">
+            <div class="period">{t.year}</div>
+            <div><p class="detail">{t.text}</p></div>
+          </article>
+        ))}
+
+        <h3 class="subsection-title">Conference presentations</h3>
+        {cv.talks.conferences.map((t) => (
+          <article class="timeline-item">
+            <div class="period">{t.year}</div>
+            <div><p class="detail">{t.text}</p></div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section id="teaching">
+      <div class="container">
+        <h2 class="section-title">Teaching experience</h2>
+        {cv.teaching.map((t) => (
+          <article class="timeline-item">
+            <div class="period">{t.period}</div>
+            <div><p class="detail">{t.text}</p></div>
+          </article>
+        ))}
+        <h3 class="subsection-title">Research supervision</h3>
+        <p>{cv.supervision}</p>
+        <p class="section-lead">
+          Delivery: classroom and digital instruction, LMS (Canvas), recorded lectures, and
+          <a href={cv.links.youtube}>open educational content on YouTube</a>.
+        </p>
+      </div>
+    </section>
+
+    <section id="achievements">
+      <div class="container">
+        <h2 class="section-title">Recent achievements</h2>
+        <p class="section-lead">Administrative leadership, automation, consultancy, and training (2025–2026).</p>
+        {cv.achievements.map((group) => (
+          <div class="achievement-block">
+            <h3 class="subsection-title">{group.subtitle}</h3>
+            <p class="scope">{group.scope}</p>
+            <ul class="clean">
+              {group.bullets.map((b) => (
+                <li set:html={b} />
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section id="languages">
+      <div class="container">
+        <h2 class="section-title">Languages</h2>
+        {cv.languages.map((lang) => (
+          <div class="lang-row">
+            <strong>{lang.name}</strong>
+            <span>{lang.level}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p>
+          <a href={`mailto:${p.email}`}>{p.email}</a><br />
+          {p.phone}<br />
+          {p.address}
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Last updated {cv.meta.lastUpdated} · <a href={pdf}>Download academic CV (PDF)</a></p>
+    </div>
+  </footer>
+</BaseLayout>

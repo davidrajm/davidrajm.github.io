@@ -1,0 +1,351 @@
+{
+  "meta": {
+    "lastUpdated": "2026-05-26",
+    "lang": "en",
+    "pdfPath": "/downloads/David_Raj_M_Academic_CV.pdf"
+  },
+  "person": {
+    "name": "Dr. David Raj M",
+    "degrees": "Ph.D. (Mathematics) · M.Tech. (CSE, AI & ML)",
+    "title": "Assistant Professor",
+    "department": "Department of Mathematics, School of Advanced Sciences",
+    "affiliation": "Vellore Institute of Technology, Chennai, Tamil Nadu, India",
+    "email": "mailme.davidrajm@gmail.com",
+    "phone": "+91 75028 78908",
+    "address": "SD 6/6, TNPHC, Melakotaiyur, Chennai 600127, Tamil Nadu, India",
+    "website": "https://davidrajm.github.io"
+  },
+  "links": {
+    "scholar": "https://scholar.google.com/citations?user=YM-NvPQAAAAJ",
+    "youtube": "https://www.youtube.com/c/DavidRajM",
+    "github": "https://github.com/davidrajm"
+  },
+  "profiles": [
+    {
+      "label": "ORCID iD",
+      "id": "0000-0003-1088-6274",
+      "hint": "orcid.org",
+      "url": "https://orcid.org/0000-0003-1088-6274"
+    },
+    {
+      "label": "Scopus Author ID",
+      "id": "57192078230",
+      "hint": "scopus.com",
+      "url": "https://www.scopus.com/authid/detail.uri?authorId=57192078230"
+    },
+    {
+      "label": "Google Scholar",
+      "id": "YM-NvPQAAAAJ",
+      "hint": "scholar.google.com",
+      "url": "https://scholar.google.com/citations?user=YM-NvPQAAAAJ"
+    },
+    {
+      "label": "Web of Science",
+      "id": "3790336",
+      "hint": "webofscience.com",
+      "url": "https://www.webofscience.com/wos/author/record/3790336"
+    }
+  ],
+  "about": "Data scientist and mathematician bridging rigorous linear algebra, graph theory, and fuzzy modelling with machine learning for healthcare and engineering applications. Experienced in publication, faculty development programmes, and student-centred teaching with modern LMS tools.",
+  "researchInterests": [
+    "Linear algebra and generalized inverses",
+    "Graph theory and network science",
+    "Fuzzy logic and decision making",
+    "Machine learning and deep learning",
+    "Image processing and computer vision",
+    "Scientific computing and algorithms"
+  ],
+  "skills": [
+    {
+      "label": "Research and quantitative methods",
+      "detail": "Computational mathematics, mathematical modelling, statistical analysis, graph theory, fuzzy logic, generalized inverses, algorithm design"
+    },
+    {
+      "label": "Machine learning and AI",
+      "detail": "Machine learning, deep learning, graph neural networks, transfer learning, generative AI, LLMs, transformers, computer vision, image processing"
+    },
+    {
+      "label": "Programming and scientific computing",
+      "detail": "Python, R, Java, MATLAB, SageMath, C and C++; NumPy, Pandas, scikit-learn, TensorFlow, PyTorch, Keras, Jupyter"
+    },
+    {
+      "label": "Data systems and software development",
+      "detail": "SQL, MySQL, PostgreSQL; Django, React, Vue.js, Next.js, PHP, WordPress; Git, GitHub, Bitbucket; workflow automation"
+    },
+    {
+      "label": "Academic and professional tools",
+      "detail": "LaTeX, Typst, Beamer, SPSS; scientific writing; OBE and accreditation; LMS (Canvas)"
+    }
+  ],
+  "education": [
+    {
+      "period": "2022–2025",
+      "degree": "M.Tech. Computer Science and Engineering (AI and ML)",
+      "institution": "Vellore Institute of Technology, Chennai",
+      "detail": "94% (aggregate)"
+    },
+    {
+      "period": "2016–2020",
+      "degree": "Ph.D. in Mathematics",
+      "institution": "Manipal Academy of Higher Education, Manipal",
+      "detail": "Thesis: Generalized Inverses and its Applications"
+    },
+    {
+      "period": "2014–2015",
+      "degree": "M.Phil. in Mathematics",
+      "institution": "Bharathidasan University, Trichy",
+      "detail": "81%"
+    },
+    {
+      "period": "2012–2014",
+      "degree": "M.Sc. in Mathematics",
+      "institution": "Bharathidasan University, Trichy",
+      "detail": "71.27%"
+    },
+    {
+      "period": "2009–2012",
+      "degree": "B.Sc. in Mathematics",
+      "institution": "St. Joseph's College (Autonomous), Trichy",
+      "detail": "82.50%"
+    }
+  ],
+  "appointments": [
+    {
+      "period": "2021–present",
+      "role": "Assistant Professor",
+      "org": "Department of Mathematics, School of Advanced Sciences, VIT Chennai",
+      "detail": "Teaching, research supervision, and interdisciplinary collaboration in AI/ML and applied mathematics."
+    },
+    {
+      "period": "2025–present",
+      "role": "Assistant Director, Ranking and Accreditation",
+      "org": "Vellore Institute of Technology, Chennai",
+      "detail": null
+    },
+    {
+      "period": "Feb–May 2021",
+      "role": "Assistant Professor",
+      "org": "St. Joseph's College, Bangalore",
+      "detail": null
+    },
+    {
+      "period": "2019–2021",
+      "role": "Assistant Professor",
+      "org": "Sikkim Manipal Institute of Technology, Sikkim",
+      "detail": "Rainfall distribution modelling (machine learning and statistics)."
+    },
+    {
+      "period": "2015–2018",
+      "role": "Junior Research Fellow",
+      "org": "Department of Data Science (formerly Statistics), MAHE, Manipal",
+      "detail": "Generalized inverses, iterative algorithms, SageMath/Python implementations."
+    }
+  ],
+  "awards": [
+    {
+      "year": "2015",
+      "description": "UGC NET-JRF (Mathematical Sciences) — 112/314"
+    }
+  ],
+  "keyPublications": [
+    {
+      "title": "Low-light image enhancement using fuzzy methods",
+      "summary": "Novel parametrized intuitionistic fuzzy framework for low-light enhancement with bounded parameter search and HSI-space modelling.",
+      "venue": "Applied Soft Computing, 2025"
+    },
+    {
+      "title": "Optimal graph embedding and wirelength calculation",
+      "summary": "Algorithms for minimum linear arrangement and embedding of graph products into grids and related host topologies.",
+      "venue": "The Journal of Supercomputing, 2024"
+    },
+    {
+      "title": "COVID-19 vaccine decision system",
+      "summary": "Energy-based bipolar intuitionistic fuzzy digraph model for multi-criteria vaccine selection in healthcare settings.",
+      "venue": "Applied Soft Computing, 2023"
+    },
+    {
+      "title": "Intuitionistic fuzzy transportation problem solver",
+      "summary": "Branch-and-bound technique for fully intuitionistic fuzzy transportation problems with improved computational efficiency.",
+      "venue": "Journal of Intelligent and Fuzzy Systems, 2023"
+    },
+    {
+      "title": "ICU mortality prediction using deep learning",
+      "summary": "Semi-supervised clustering of MICU cohorts (MIMIC-II) with deep survival models for mortality risk stratification.",
+      "venue": "Informatics in Medicine Unlocked, 2023"
+    }
+  ],
+  "publications": {
+    "peerReviewed": [
+      {
+        "year": "2025",
+        "citation": "<strong>Yagavi R.</strong>, <strong>Mahesh Kumar C.V.</strong>, Arumugam S., <strong>David Raj M.</strong> Stress of a Graph—Theory, Algorithms and Applications. In <em>Graph Theory and Its Applications: Topological Indices of Graphs I</em>, pp. 9–24. Selçuk University Press."
+      },
+      {
+        "year": "2025",
+        "citation": "Maheshkumar C.V., <strong>David Raj M.</strong>, Saraswathi D. On generalized Sugeno's class generator and parametrized intuitionistic fuzzy approach for enhancing low-light images. <em>Applied Soft Computing</em> 172, 112865."
+      },
+      {
+        "year": "2025",
+        "citation": "Vincy G. Caroline, <strong>David Raj M.</strong> On the optimal layout of (K<sub>p</sub> − C<sub>p</sub>)<sup>n</sup> into grid and certain structures. <em>Scientific Reports</em> 15, 17114."
+      },
+      {
+        "year": "2024",
+        "citation": "Vincy G. Caroline, <strong>David Raj M.</strong> Minimum linear arrangement and embedding of (K<sub>11</sub> − C<sub>11</sub>)<sup>n</sup> into specific graphs with optimal wirelength calculation. <em>The Journal of Supercomputing</em> 81, 218."
+      },
+      {
+        "year": "2023",
+        "citation": "M.K. Lintu, <strong>David Raj M.</strong>, Asha Kamath. Mortality prediction on unsupervised and semi-supervised clusters of medical intensive care unit patients based on MIMIC-II database. <em>Informatics in Medicine Unlocked</em> 39, 101264."
+      },
+      {
+        "year": "2023",
+        "citation": "Deva Nithyanandham, Felix Augustin, <strong>David Raj M.</strong>, Nagarajan Deivanayagam Pillai. Energy based bipolar intuitionistic fuzzy digraph decision-making system in selecting COVID-19 vaccines. <em>Applied Soft Computing</em>, 110793."
+      },
+      {
+        "year": "2023",
+        "citation": "J. Jansi Rani, S. Dhanasekar, <strong>David Raj M.</strong>, A. Manivannan. On solving fully intuitionistic fuzzy transportation problem via branch and bound technique. <em>Journal of Intelligent &amp; Fuzzy Systems</em> 44(4), 6219–6229."
+      },
+      {
+        "year": "2023",
+        "citation": "M.K. Lintu, Amitha Puranik, Kalesh M. Karun, <strong>David Raj M.</strong>, Asha Kamath. Non linear relationship between BMI and Sepsis among ICU patients: analysis of the MIMIC-III real world database. <em>Journal of Clinical and Diagnostic Research</em>."
+      },
+      {
+        "year": "2022",
+        "citation": "<strong>David Raj M.</strong>, M.K. Lintu, S.N.S. Acharya, Asha Kamath. Mortality prediction of patients admitted to surgical intensive care unit using deep learning based survival models. <em>Malaysian Journal of Science</em> 41(3), 44–48."
+      },
+      {
+        "year": "2018",
+        "citation": "K. Manjunatha Prasad, <strong>David Raj M.</strong> Bordering method to compute core-EP inverse. <em>Special Matrices</em> 6, 193–200."
+      },
+      {
+        "year": "2018",
+        "citation": "K. Manjunatha Prasad, <strong>David Raj M.</strong>, M. Vinay. An iterative method to find Core-EP inverse. <em>Bull. Kerala Math. Assoc.</em> 16(1), 139–152."
+      },
+      {
+        "year": "2017",
+        "citation": "Ravindra B. Bapat, S.K. Jain, K. Manjunatha Prasad, <strong>David Raj M.</strong> Outer inverses: characterization and applications. <em>Linear Algebra and its Applications</em> 528, 171–184."
+      }
+    ],
+    "proceedings": [
+      {
+        "year": "2025",
+        "citation": "Maheshkumar C.V., <strong>David Raj M.</strong>, Saraswathi D. Parametrized interval valued intuitionistic fuzzy set for low light image enhancement. <em>ISCMI 2025</em>, pp. 239–243."
+      },
+      {
+        "year": "2024",
+        "citation": "Yogesh Chettri, <strong>David Raj M.</strong>, M.F. Abdul Rahim. Propagation of two-soliton in a compressible hyperelastic rod. <em>ICNDA 2024</em>, Springer, pp. 295–307."
+      },
+      {
+        "year": "2023",
+        "citation": "<strong>David Raj M.</strong>, A. Felix, Vimaleshwaran S. Prediction of rainfall using machine learning in Chennai region. <em>Contemporary Research Trends in Mathematics</em>, pp. 90–106."
+      },
+      {
+        "year": "2022",
+        "citation": "Barsha Pradhan, Nikhil Pal, <strong>David Raj M.</strong> Bifurcation of nucleus-acoustic superperiodic and supersolitary waves in a quantum plasma. <em>Nonlinear Dynamics and Applications</em>, Springer, pp. 43–53."
+      },
+      {
+        "year": "2021",
+        "citation": "S. Kiran, <strong>David Raj M.</strong> Determination of best-fit probability distribution of rainfall data in Sikkim, India. <em>Water Security and Sustainability</em>, Springer, pp. 65–77."
+      }
+    ],
+    "underReview": [
+      {
+        "year": "2025",
+        "citation": "Maheshkumar C.V. et al. Adaptive low light image enhancement using bipolar fuzzy set. <em>IEEE Transactions on Fuzzy Systems</em> (communicated)."
+      },
+      {
+        "year": "2025",
+        "citation": "Maheshkumar C.V., <strong>David Raj M.</strong>, Saraswathi D. Exploring angle and amplitude encoding in quanvolutional neural network for MNIST classification. <em>Philosophical Magazine</em> (communicated)."
+      },
+      {
+        "year": "2025",
+        "citation": "Maheshkumar C.V., <strong>David Raj M.</strong>, Saraswathi D. Intuitionistic fuzzy-based enhancement of low-light color images using image fusion and grayscale processing. <em>Computers and Electrical Engineering</em> (communicated)."
+      },
+      {
+        "year": "2025",
+        "citation": "Yagavi R., <strong>David Raj M.</strong> Stress centrality in weighted and fuzzy networks. <em>Applied Soft Computing</em> (communicated)."
+      }
+    ]
+  },
+  "talks": {
+    "invited": [
+      { "year": "2023", "text": "Guest lecture — Survival Analysis. VIT Chennai." },
+      { "year": "2023", "text": "Five-day STTP — The Role of Linear Algebra in ML. SVCE, India." },
+      { "year": "2023", "text": "Workshop for CBSE teachers — Computation in school mathematics. Bala Vidya Mandir, Chennai." },
+      { "year": "2022", "text": "FDP — Advanced LaTeX (class and style files). VIT Chennai." },
+      { "year": "2022", "text": "Hands-on Python for mathematicians. Periyar University, Salem." },
+      { "year": "2022", "text": "Special talk — Image processing with Python. Sanghamam College, Tamil Nadu." },
+      { "year": "2021", "text": "FDP — Mathematics of Machine Learning. ANJAC, Sivakasi." },
+      { "year": "2018", "text": "Workshop — SageMath: matrices, graphs and networks. CARAMS, MAHE Manipal." }
+    ],
+    "organised": [
+      { "year": "2023", "text": "FDP on Linear Algebra and its Applications. VIT Chennai." },
+      { "year": "2022", "text": "One-day online workshop — Typing question papers in LaTeX. VIT Chennai." },
+      { "year": "2022", "text": "FDP on Recent Advances in Mathematics. VIT Chennai." },
+      { "year": "2019", "text": "National workshop — Typing scientific documents in LaTeX. SMIT, Sikkim." },
+      { "year": "2020", "text": "National workshop on special matrices and stochastic games. SMIT, Sikkim." }
+    ],
+    "conferences": [
+      { "year": "2023", "text": "A note on the computation of core-EP inverse. MAHE, Manipal." },
+      { "year": "2019", "text": "Best-fit probability distribution for rainfall in North Sikkim. ICWSS, SMIT." },
+      { "year": "2017", "text": "Computational methods to find core-EP inverse. ICLAA, MAHE." },
+      { "year": "2016", "text": "Iterative method to find core-EP inverse. Manipal Student Research Colloquium." },
+      { "year": "2016", "text": "Bordering method to compute core-EP inverse. NCLA, SMU Sikkim." },
+      { "year": "2015", "text": "Characterization of outer inverses and absorption law. ICMPS, Goa." }
+    ]
+  },
+  "teaching": [
+    { "period": "2021–present", "text": "Applied Multivariate Data Analysis; Python for Data Science; Linear Algebra; Complex Analysis; Calculus (VIT Chennai)." },
+    { "period": "2021", "text": "Undergraduate mathematics (St. Joseph's College, Bangalore)." },
+    { "period": "2019–2021", "text": "Engineering Mathematics II–IV; Discrete Mathematics; Numerical Methods; Computational Lab (SMIT)." },
+    { "period": "2015–2018", "text": "Linear Algebra; Real Analysis; Measure Theory (MAHE, as JRF teaching support)." }
+  ],
+  "supervision": "Supervising doctoral and postgraduate scholars in graph embedding, centrality measures, fuzzy modelling, and image processing; guiding undergraduate project teams in machine learning and data science.",
+  "achievements": [
+    {
+      "subtitle": "Ranking, accreditation and quality assurance",
+      "scope": "Assistant Director, Ranking and Accreditation · VIT Chennai (2025–present)",
+      "bullets": [
+        "Lead cross-departmental data collection, validation, and submission for national and international rankings (NIRF, QS, Shanghai, and allied frameworks).",
+        "Support faculty target-setting; analyse attainment against institutional goals and deliver improvement feedback.",
+        "Conduct faculty workshops on outcome-based education—CO formulation, PO mapping, and attainment analysis.",
+        "<strong>Monthly target review automation:</strong> unified departmental dashboards and growth-vs-target presentations; reduced manual compilation from ~2 days to ~2 hours.",
+        "<strong>Quality Review Report automation:</strong> weekly activity compilation for valedictory release; reduced preparation from ~1 day to ~1 hour.",
+        "<strong>NBA data quality validator:</strong> programmatic checks on 500+ faculty profiles before submission.",
+        "<strong>CO compliance tracker:</strong> defaulter lists for pending course-outcome calculations by subject, generated in minutes."
+      ]
+    },
+    {
+      "subtitle": "Academic process automation",
+      "scope": "Department of Mathematics · VIT Chennai",
+      "bullets": [
+        "<strong>Full-stack timetable scheduler</strong> for slot-based timetabling (regular and flexi slots).",
+        "<strong>Project review management system</strong> with automated consolidated reports.",
+        "<strong>Result analytics</strong> for internal examinations: CO attainment and slow-learner identification.",
+        "Workflow utilities including automated extraction of slot-wise marks from consolidated mark files."
+      ]
+    },
+    {
+      "subtitle": "Industry consultancy",
+      "scope": "Kadant India Private Limited · June 2025",
+      "bullets": [
+        "Software to measure nano-tooth outlines from images, overlay digital dimensions, and produce layout-ready models (preprocessing, edge detection, deep learning, web interface)."
+      ]
+    },
+    {
+      "subtitle": "Training and professional development",
+      "scope": "Corporate and academic engagements",
+      "bullets": [
+        "Regular delivery in Python, R, web stacks, automation, LaTeX/Typst, data structures, ML/DL, generative AI, and LLMs.",
+        "Feb 2026 — FDP, Dayananda Sagar University: deep learning, generative AI, and transformer models.",
+        "Feb 2026 — MSc Data Science (VIT Chennai): agentic AI and autonomous intelligent systems.",
+        "Mar 2026 — Faculty training (VIT Chennai): data structures and deep learning."
+      ]
+    }
+  ],
+  "languages": [
+    { "name": "English", "level": "Fluent — read, write, speak" },
+    { "name": "Tamil", "level": "Native" },
+    { "name": "Hindi", "level": "Conversational" },
+    { "name": "Kannada", "level": "Conversational" }
+  ]
+}
