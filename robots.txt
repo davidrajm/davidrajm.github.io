@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://davidrajm.github.io/sitemap.xml
