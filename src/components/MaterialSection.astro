@@ -1,0 +1,33 @@
+---
+interface Props {
+  id: string;
+  title: string;
+  subtitle?: string;
+  icon: string;
+  elevated?: boolean;
+  tint?: "none" | "blue" | "violet" | "mint" | "peach" | "rose";
+}
+
+const { id, title, subtitle, icon, elevated = true, tint = "none" } = Astro.props;
+---
+
+<section
+  id={id}
+  class:list={["m-section", tint !== "none" && `m-section--${tint}`]}
+  aria-labelledby={`${id}-heading`}
+>
+  <div class="container-full m-section__wrap">
+    <header class="m-section__header">
+      <div class="m-section__icon-wrap" aria-hidden="true">
+        <span class="material-symbols-outlined">{icon}</span>
+      </div>
+      <div class="m-section__titles">
+        <h2 class="m-section__title" id={`${id}-heading`}>{title}</h2>
+        {subtitle && <p class="m-section__subtitle">{subtitle}</p>}
+      </div>
+    </header>
+    <div class:list={["m-surface", elevated ? "m-surface--elevated" : "m-surface--flat"]}>
+      <slot />
+    </div>
+  </div>
+</section>

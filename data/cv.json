@@ -55,26 +55,132 @@
     "Image processing and computer vision",
     "Scientific computing and algorithms"
   ],
+  "researchAreas": [
+    {
+      "title": "Linear algebra and generalized inverses",
+      "desc": "Matrix theory, Moore–Penrose inverses, and computational linear algebra.",
+      "icon": "functions",
+      "accent": "blue"
+    },
+    {
+      "title": "Graph theory and network science",
+      "desc": "Centrality, embeddings, and structure in complex networks.",
+      "icon": "hub",
+      "accent": "violet"
+    },
+    {
+      "title": "Fuzzy logic and decision making",
+      "desc": "Uncertainty modelling and multi-criteria decision support.",
+      "icon": "blur_on",
+      "accent": "teal"
+    },
+    {
+      "title": "Machine learning and deep learning",
+      "desc": "Supervised learning, GNNs, transformers, and generative AI.",
+      "icon": "psychology",
+      "accent": "amber"
+    },
+    {
+      "title": "Image processing and computer vision",
+      "desc": "Segmentation, feature extraction, and industrial vision pipelines.",
+      "icon": "photo_camera",
+      "accent": "rose"
+    },
+    {
+      "title": "Scientific computing and algorithms",
+      "desc": "High-performance numerics, optimisation, and reproducible workflows.",
+      "icon": "memory",
+      "accent": "blue"
+    }
+  ],
   "skills": [
     {
       "label": "Research and quantitative methods",
-      "detail": "Computational mathematics, mathematical modelling, statistical analysis, graph theory, fuzzy logic, generalized inverses, algorithm design"
+      "detail": "Rigorous modelling, statistics, and algorithm design for applied mathematics.",
+      "icon": "analytics",
+      "accent": "blue",
+      "tags": [
+        "Computational mathematics",
+        "Mathematical modelling",
+        "Statistical analysis",
+        "Graph theory",
+        "Fuzzy logic",
+        "Generalized inverses",
+        "Algorithm design"
+      ]
     },
     {
       "label": "Machine learning and AI",
-      "detail": "Machine learning, deep learning, graph neural networks, transfer learning, generative AI, LLMs, transformers, computer vision, image processing"
+      "detail": "From classical ML to deep learning, vision, and generative AI systems.",
+      "icon": "psychology",
+      "accent": "violet",
+      "tags": [
+        "Machine learning",
+        "Deep learning",
+        "Graph neural networks",
+        "Transfer learning",
+        "Generative AI",
+        "LLMs",
+        "Transformers",
+        "Computer vision",
+        "Image processing"
+      ]
     },
     {
       "label": "Programming and scientific computing",
-      "detail": "Python, R, Java, MATLAB, SageMath, C and C++; NumPy, Pandas, scikit-learn, TensorFlow, PyTorch, Keras, Jupyter"
+      "detail": "Languages and libraries for reproducible research and production pipelines.",
+      "icon": "terminal",
+      "accent": "teal",
+      "tags": [
+        "Python",
+        "R",
+        "Java",
+        "MATLAB",
+        "SageMath",
+        "C / C++",
+        "NumPy",
+        "Pandas",
+        "scikit-learn",
+        "TensorFlow",
+        "PyTorch",
+        "Keras",
+        "Jupyter"
+      ]
     },
     {
       "label": "Data systems and software development",
-      "detail": "SQL, MySQL, PostgreSQL; Django, React, Vue.js, Next.js, PHP, WordPress; Git, GitHub, Bitbucket; workflow automation"
+      "detail": "Full-stack tooling, databases, version control, and workflow automation.",
+      "icon": "database",
+      "accent": "amber",
+      "tags": [
+        "SQL",
+        "MySQL",
+        "PostgreSQL",
+        "Django",
+        "React",
+        "Vue.js",
+        "Next.js",
+        "PHP",
+        "WordPress",
+        "Git",
+        "GitHub",
+        "Workflow automation"
+      ]
     },
     {
       "label": "Academic and professional tools",
-      "detail": "LaTeX, Typst, Beamer, SPSS; scientific writing; OBE and accreditation; LMS (Canvas)"
+      "detail": "Publishing, assessment, accreditation, and teaching platforms.",
+      "icon": "school",
+      "accent": "rose",
+      "tags": [
+        "LaTeX",
+        "Typst",
+        "Beamer",
+        "SPSS",
+        "Scientific writing",
+        "OBE & accreditation",
+        "LMS (Canvas)"
+      ]
     }
   ],
   "education": [
@@ -343,9 +449,15 @@
     }
   ],
   "languages": [
-    { "name": "English", "level": "Fluent — read, write, speak" },
-    { "name": "Tamil", "level": "Native" },
-    { "name": "Hindi", "level": "Conversational" },
-    { "name": "Kannada", "level": "Conversational" }
+    { "name": "English", "level": "Fluent — read, write, speak", "proficiency": 95 },
+    { "name": "Tamil", "level": "Native", "proficiency": 100 },
+    { "name": "Hindi", "level": "Conversational", "proficiency": 72 },
+    { "name": "Kannada", "level": "Conversational", "proficiency": 68 }
+  ],
+  "achievementMeta": [
+    { "icon": "verified", "accent": "blue" },
+    { "icon": "terminal", "accent": "violet" },
+    { "icon": "precision_manufacturing", "accent": "amber" },
+    { "icon": "school", "accent": "teal" }
   ]
 }
