@@ -4,18 +4,13 @@ Academic CV website (Astro static site) for **Dr. David Raj M**.
 
 **Live site:** [https://davidrajm.github.io](https://davidrajm.github.io)
 
-## GitHub Pages setup (required once)
+## GitHub Pages
 
-If you only see this README on the live site, Pages is publishing the **master** branch instead of the built site. Fix it in the repo:
+This user site (`davidrajm.github.io`) is published from the **`master` branch root**. After each build, `npm run publish:root` copies `dist/` into the repo root (`index.html`, `_astro/`, etc.) so visitors see the CV, not this README.
 
-1. Open **Settings → Pages → Build and deployment**
-2. Under **Source**, choose **one** of:
-   - **GitHub Actions** (recommended — uses `.github/workflows/deploy.yml`), or
-   - **Deploy from a branch** → Branch: **`gh-pages`** → Folder: **`/ (root)`**
+Every push to `master` (except deploy-only file changes) runs `.github/workflows/deploy.yml`, which builds Astro, updates the root site files, and also publishes to the `gh-pages` branch.
 
-3. Save and wait 1–2 minutes, then hard-refresh [davidrajm.github.io](https://davidrajm.github.io).
-
-Every push to `master` runs the workflow: it builds Astro and deploys to both GitHub Actions Pages and the `gh-pages` branch.
+Optional: in **Settings → Pages**, you can switch the source to **GitHub Actions** or branch **`gh-pages`** instead of relying on root files on `master`.
 
 ## Development
 
@@ -35,9 +30,16 @@ npm run preview   # preview production build
 
 ## Content
 
-Edit **`data/cv.json`** (synced from Typst `content.typ` in the resume repo).
+**Full guide:** [docs/SOP-UPDATE-CONTENT.md](docs/SOP-UPDATE-CONTENT.md) — section-by-section SOP for updating the live site.
 
-Place the latest PDF at **`public/downloads/David_Raj_M_Academic_CV.pdf`**.
+Quick reference:
+
+- **Canonical data (edit first):** `DavidResume/data/` — one JSON file per section (see `data/README.md` there)
+- **`npm run sync:data`** — copies all section JSON into this repo’s `data/` (runs before `dev` / `build`)
+- **`src/data/loadCv.ts`** — combines section files for Astro pages
+- **`data/supervision.json`** — Research Supervision carousel ([field reference](data/supervision.schema.md))
+- **`public/students/`** — student photos ([README](public/students/README.txt))
+- **`public/downloads/David_Raj_M_Academic_CV.pdf`** — downloadable CV
 
 ## Deploy
 

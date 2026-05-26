@@ -3,6 +3,17 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [master, main]
+    paths-ignore:
+      - "index.html"
+      - "about.html"
+      - "favicon.svg"
+      - "robots.txt"
+      - "sitemap.xml"
+      - ".nojekyll"
+      - "_astro/**"
+      - "images/**"
+      - "students/**"
+      - "downloads/**"
   workflow_dispatch:
 
 permissions:
@@ -25,6 +36,16 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+      - name: Publish built site to repository root (User Pages from master)
+        run: npm run publish:root
+      - name: Commit site root for GitHub Pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .nojekyll index.html about.html favicon.svg robots.txt sitemap.xml _astro images students downloads
+          git diff --staged --quiet && echo "No site root changes to commit." && exit 0
+          git commit -m "Deploy site to Pages root [skip ci]"
+          git push
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

@@ -4,8 +4,12 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "sync:data": "node scripts/sync-cv-data.mjs",
+    "predev": "npm run sync:data",
     "dev": "astro dev",
+    "prebuild": "npm run sync:data",
     "build": "astro build",
+    "publish:root": "node scripts/publish-to-pages-root.mjs",
     "preview": "astro preview"
   },
   "dependencies": {
