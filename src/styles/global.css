@@ -8,8 +8,8 @@
   --md-primary-container: #d8e6f5;
   --md-on-primary-container: #0f2744;
 
-  --md-secondary: #5c6bc0;
-  --md-secondary-container: #e8eaf6;
+  --md-secondary: #3d5a80;
+  --md-secondary-container: #e8edf3;
 
   --md-surface: #ffffff;
   --md-surface-dim: #f4f6f9;
@@ -21,25 +21,38 @@
   --md-outline: #c5cdd8;
   --md-outline-variant: #dde4ee;
 
-  --md-hero-gradient: linear-gradient(
-    135deg,
-    #e8f2ff 0%,
-    #f3e8ff 38%,
-    #e6fff5 72%,
-    #fff4e6 100%
-  );
+  /* Minimal palette — navy slate + neutral grays only */
+  --shade-900: #152a45;
+  --shade-800: #1e3a5f;
+  --shade-700: #2c4a6e;
+  --shade-600: #3d5a80;
+  --shade-500: #5c6f85;
+  --shade-400: #8a9bb0;
+  --shade-200: #d4dce6;
+  --shade-100: #e8edf3;
+  --shade-50: #f6f8fa;
 
-  --tint-blue: linear-gradient(180deg, #eef5ff 0%, #f8fbff 100%);
-  --tint-violet: linear-gradient(180deg, #f3eeff 0%, #faf8ff 100%);
-  --tint-mint: linear-gradient(180deg, #ecfdf8 0%, #f7fffc 100%);
-  --tint-peach: linear-gradient(180deg, #fff5eb 0%, #fffcf7 100%);
-  --tint-rose: linear-gradient(180deg, #fff0f3 0%, #fffafb 100%);
+  --md-hero-gradient: linear-gradient(160deg, var(--shade-50) 0%, var(--md-surface-dim) 55%, #eef2f6 100%);
 
-  --accent-blue: #2563eb;
-  --accent-violet: #7c3aed;
-  --accent-teal: #0d9488;
-  --accent-amber: #d97706;
-  --accent-rose: #e11d48;
+  --section-tint-a: linear-gradient(180deg, var(--shade-50) 0%, var(--md-surface-dim) 100%);
+  --section-tint-b: linear-gradient(180deg, #eef2f6 0%, var(--shade-50) 100%);
+
+  /* Legacy tint names → two alternating section backgrounds */
+  --tint-blue: var(--section-tint-a);
+  --tint-violet: var(--section-tint-b);
+  --tint-mint: var(--section-tint-a);
+  --tint-peach: var(--section-tint-b);
+  --tint-rose: var(--section-tint-a);
+
+  /* Legacy accent aliases (single-hue family) */
+  --accent-blue: var(--shade-800);
+  --accent-violet: var(--shade-700);
+  --accent-teal: var(--shade-600);
+  --accent-amber: var(--shade-600);
+  --accent-rose: var(--shade-500);
+
+  --icon-gradient: linear-gradient(135deg, var(--shade-800), var(--shade-600));
+  --bar-gradient: linear-gradient(90deg, var(--shade-700), var(--shade-500));
 
   --md-elevation-1: 0 1px 2px rgba(15, 39, 68, 0.06), 0 1px 3px rgba(15, 39, 68, 0.1);
   --md-elevation-2: 0 2px 6px rgba(15, 39, 68, 0.08), 0 4px 12px rgba(15, 39, 68, 0.06);
@@ -173,7 +186,7 @@ a:hover {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: var(--md-radius-md);
-  background: linear-gradient(135deg, var(--accent-blue), var(--accent-violet));
+  background: var(--icon-gradient);
   color: var(--md-on-primary);
   font-weight: 700;
   font-size: 0.85rem;
@@ -393,14 +406,14 @@ body.nav-open .md-drawer:not([hidden]) {
 
 .md-drawer__link:hover,
 .md-drawer__link.is-active {
-  background: linear-gradient(90deg, #e8f0fe, #f3e8ff);
-  color: var(--accent-violet);
-  border-color: #c7d2fe;
+  background: var(--shade-100);
+  color: var(--md-primary);
+  border-color: var(--shade-200);
 }
 
 .md-drawer__link.is-active .md-drawer__link-icon {
   opacity: 1;
-  color: var(--accent-violet);
+  color: var(--md-primary);
   transform: translateX(2px);
 }
 
@@ -433,25 +446,25 @@ body.nav-open .md-drawer:not([hidden]) {
 }
 
 .md-btn--filled {
-  background: linear-gradient(135deg, var(--md-primary), var(--accent-violet));
+  background: linear-gradient(135deg, var(--shade-800), var(--shade-600));
   color: var(--md-on-primary);
   box-shadow: var(--md-elevation-1);
 }
 
 .md-btn--filled:hover {
-  background: linear-gradient(135deg, var(--md-primary-dark), #6d28d9);
+  background: linear-gradient(135deg, var(--shade-900), var(--shade-700));
   color: var(--md-on-primary);
   box-shadow: var(--md-elevation-2);
 }
 
 .md-btn--tonal {
-  background: var(--md-primary-container);
-  color: var(--md-on-primary-container);
+  background: var(--shade-100);
+  color: var(--md-primary);
 }
 
 .md-btn--tonal:hover {
-  background: #c5d9ed;
-  color: var(--md-on-primary-container);
+  background: var(--shade-200);
+  color: var(--shade-900);
 }
 
 .md-btn--outlined {
@@ -501,7 +514,7 @@ body.nav-open .md-drawer:not([hidden]) {
   right: -20%;
   width: 50%;
   height: 80%;
-  background: radial-gradient(circle, rgba(92, 107, 192, 0.12) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(30, 58, 95, 0.08) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -611,7 +624,7 @@ body.nav-open .md-drawer:not([hidden]) {
 
 .hero-profiles__head .material-symbols-outlined {
   font-size: 1.1rem;
-  color: var(--accent-violet);
+  color: var(--shade-600);
 }
 
 .hero-profiles__list {
@@ -626,7 +639,7 @@ body.nav-open .md-drawer:not([hidden]) {
   grid-template-rows: auto auto;
   gap: 0.15rem 0.35rem;
   padding: 0.75rem 0.85rem;
-  background: linear-gradient(135deg, #f8fbff 0%, #faf8ff 100%);
+  background: var(--shade-50);
   border: 1px solid var(--md-outline-variant);
   border-radius: var(--md-radius-md);
   text-decoration: none;
@@ -635,7 +648,7 @@ body.nav-open .md-drawer:not([hidden]) {
 }
 
 .hero-profile-link:hover {
-  border-color: #c7d2fe;
+  border-color: var(--shade-200);
   box-shadow: var(--md-elevation-2);
   transform: translateY(-1px);
 }
@@ -669,7 +682,7 @@ body.nav-open .md-drawer:not([hidden]) {
   grid-row: 1 / span 2;
   align-self: center;
   font-size: 1rem;
-  color: var(--accent-blue);
+  color: var(--shade-600);
   opacity: 0.7;
 }
 
@@ -705,46 +718,19 @@ body.nav-open .md-drawer:not([hidden]) {
   height: 2.5rem;
   border-radius: var(--md-radius-md);
   color: #fff;
+  background: var(--icon-gradient);
 }
 
-.research-pillar--blue .research-pillar__icon {
-  background: linear-gradient(135deg, var(--accent-blue), #60a5fa);
+.research-pillar[class*="research-pillar--"] {
+  border-top: 3px solid var(--shade-700);
 }
 
-.research-pillar--blue {
-  border-top: 3px solid var(--accent-blue);
+.research-pillar:nth-child(3n + 2) {
+  border-top-color: var(--shade-600);
 }
 
-.research-pillar--violet .research-pillar__icon {
-  background: linear-gradient(135deg, var(--accent-violet), #a78bfa);
-}
-
-.research-pillar--violet {
-  border-top: 3px solid var(--accent-violet);
-}
-
-.research-pillar--teal .research-pillar__icon {
-  background: linear-gradient(135deg, var(--accent-teal), #2dd4bf);
-}
-
-.research-pillar--teal {
-  border-top: 3px solid var(--accent-teal);
-}
-
-.research-pillar--amber .research-pillar__icon {
-  background: linear-gradient(135deg, var(--accent-amber), #fbbf24);
-}
-
-.research-pillar--amber {
-  border-top: 3px solid var(--accent-amber);
-}
-
-.research-pillar--rose .research-pillar__icon {
-  background: linear-gradient(135deg, var(--accent-rose), #fb7185);
-}
-
-.research-pillar--rose {
-  border-top: 3px solid var(--accent-rose);
+.research-pillar:nth-child(3n) {
+  border-top-color: var(--shade-800);
 }
 
 .research-pillar__body h3 {
@@ -767,23 +753,12 @@ body.nav-open .md-drawer:not([hidden]) {
   border-radius: var(--md-radius-lg);
   padding: 1rem 1.1rem;
   border: 1px solid var(--md-outline-variant);
+  border-top: 3px solid var(--shade-700);
   transition: box-shadow 0.2s, transform 0.2s;
 }
 
-.stat-tile:nth-child(1) {
-  border-top: 3px solid var(--accent-blue);
-}
-
-.stat-tile:nth-child(2) {
-  border-top: 3px solid var(--accent-violet);
-}
-
-.stat-tile:nth-child(3) {
-  border-top: 3px solid var(--accent-teal);
-}
-
-.stat-tile:nth-child(4) {
-  border-top: 3px solid var(--accent-amber);
+.stat-tile:nth-child(even) {
+  border-top-color: var(--shade-600);
 }
 
 .stat-tile:hover {
@@ -850,7 +825,7 @@ body.nav-open .md-drawer:not([hidden]) {
   height: 3rem;
   flex-shrink: 0;
   border-radius: var(--md-radius-md);
-  background: linear-gradient(135deg, var(--accent-blue), var(--accent-violet));
+  background: var(--icon-gradient);
   color: var(--md-on-primary);
   box-shadow: var(--md-elevation-1);
 }
@@ -957,31 +932,11 @@ body.nav-open .md-drawer:not([hidden]) {
   padding: 0.4rem 0.9rem;
   font-size: 0.82rem;
   font-weight: 500;
-  background: #fff;
-  color: var(--md-on-surface);
+  background: var(--md-surface);
+  color: var(--shade-700);
   border-radius: var(--md-radius-pill);
-  border: 1px solid var(--md-outline-variant);
+  border: 1px solid var(--shade-200);
   box-shadow: var(--md-elevation-1);
-}
-
-.md-chip:nth-child(4n + 1) {
-  border-color: #bfdbfe;
-  color: var(--accent-blue);
-}
-
-.md-chip:nth-child(4n + 2) {
-  border-color: #ddd6fe;
-  color: var(--accent-violet);
-}
-
-.md-chip:nth-child(4n + 3) {
-  border-color: #99f6e4;
-  color: var(--accent-teal);
-}
-
-.md-chip:nth-child(4n) {
-  border-color: #fde68a;
-  color: var(--accent-amber);
 }
 
 /* Technical skills — advanced cards */
@@ -1022,94 +977,30 @@ body.nav-open .md-drawer:not([hidden]) {
   filter: blur(28px);
 }
 
-.skill-panel--blue {
-  border-top: 4px solid var(--accent-blue);
+.skill-panel[class*="skill-panel--"] {
+  border-top: 4px solid var(--shade-700);
 }
 
-.skill-panel--blue .skill-panel__glow {
-  background: var(--accent-blue);
+.skill-panel:nth-child(3n + 2) {
+  border-top-color: var(--shade-600);
 }
 
-.skill-panel--blue .skill-panel__icon {
-  background: linear-gradient(135deg, var(--accent-blue), #60a5fa);
+.skill-panel:nth-child(3n) {
+  border-top-color: var(--shade-800);
 }
 
-.skill-panel--blue .skill-tag {
-  border-color: #bfdbfe;
-  color: var(--accent-blue);
-  background: #eff6ff;
+.skill-panel__glow {
+  background: var(--shade-600);
 }
 
-.skill-panel--violet {
-  border-top: 4px solid var(--accent-violet);
+.skill-panel__icon {
+  background: var(--icon-gradient);
 }
 
-.skill-panel--violet .skill-panel__glow {
-  background: var(--accent-violet);
-}
-
-.skill-panel--violet .skill-panel__icon {
-  background: linear-gradient(135deg, var(--accent-violet), #a78bfa);
-}
-
-.skill-panel--violet .skill-tag {
-  border-color: #ddd6fe;
-  color: var(--accent-violet);
-  background: #f5f3ff;
-}
-
-.skill-panel--teal {
-  border-top: 4px solid var(--accent-teal);
-}
-
-.skill-panel--teal .skill-panel__glow {
-  background: var(--accent-teal);
-}
-
-.skill-panel--teal .skill-panel__icon {
-  background: linear-gradient(135deg, var(--accent-teal), #2dd4bf);
-}
-
-.skill-panel--teal .skill-tag {
-  border-color: #99f6e4;
-  color: var(--accent-teal);
-  background: #ecfdf8;
-}
-
-.skill-panel--amber {
-  border-top: 4px solid var(--accent-amber);
-}
-
-.skill-panel--amber .skill-panel__glow {
-  background: var(--accent-amber);
-}
-
-.skill-panel--amber .skill-panel__icon {
-  background: linear-gradient(135deg, var(--accent-amber), #fbbf24);
-}
-
-.skill-panel--amber .skill-tag {
-  border-color: #fde68a;
-  color: var(--accent-amber);
-  background: #fffbeb;
-}
-
-.skill-panel--rose {
-  border-top: 4px solid var(--accent-rose);
-}
-
-.skill-panel--rose .skill-panel__glow {
-  background: var(--accent-rose);
-}
-
-.skill-panel--rose .skill-panel__icon {
-  background: linear-gradient(135deg, var(--accent-rose), #fb7185);
-}
-
-.skill-panel--rose .skill-tag {
-  border-color: #fecdd3;
-  color: var(--accent-rose);
-  background: #fff1f2;
+.skill-tag {
+  border-color: var(--shade-200);
+  color: var(--shade-700);
+  background: var(--shade-50);
 }
 
 .skill-panel__header {
@@ -1166,7 +1057,6 @@ body.nav-open .md-drawer:not([hidden]) {
   font-weight: 600;
   letter-spacing: 0.01em;
   border-radius: var(--md-radius-pill);
-  border: 1px solid var(--md-outline-variant);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
@@ -1386,36 +1276,24 @@ body.nav-open .md-drawer:not([hidden]) {
   color: #fff;
 }
 
-.achievement-panel--blue .achievement-panel__icon {
-  background: linear-gradient(135deg, var(--accent-blue), #60a5fa);
+.achievement-panel__icon {
+  background: var(--icon-gradient);
 }
 
-.achievement-panel--blue {
-  border-top: 4px solid var(--accent-blue);
+.achievement-panel[class*="achievement-panel--"] {
+  border-top: 4px solid var(--shade-700);
 }
 
-.achievement-panel--violet .achievement-panel__icon {
-  background: linear-gradient(135deg, var(--accent-violet), #a78bfa);
+.achievement-panel:nth-child(4n + 2) {
+  border-top-color: var(--shade-600);
 }
 
-.achievement-panel--violet {
-  border-top: 4px solid var(--accent-violet);
+.achievement-panel:nth-child(4n + 3) {
+  border-top-color: var(--shade-800);
 }
 
-.achievement-panel--amber .achievement-panel__icon {
-  background: linear-gradient(135deg, var(--accent-amber), #fbbf24);
-}
-
-.achievement-panel--amber {
-  border-top: 4px solid var(--accent-amber);
-}
-
-.achievement-panel--teal .achievement-panel__icon {
-  background: linear-gradient(135deg, var(--accent-teal), #2dd4bf);
-}
-
-.achievement-panel--teal {
-  border-top: 4px solid var(--accent-teal);
+.achievement-panel:nth-child(4n) {
+  border-top-color: var(--shade-500);
 }
 
 .achievement-panel__header h3 {
@@ -1456,20 +1334,8 @@ body.nav-open .md-drawer:not([hidden]) {
   margin-top: 0.1rem;
 }
 
-.achievement-panel--blue .achievement-panel__check {
-  color: var(--accent-blue);
-}
-
-.achievement-panel--violet .achievement-panel__check {
-  color: var(--accent-violet);
-}
-
-.achievement-panel--amber .achievement-panel__check {
-  color: var(--accent-amber);
-}
-
-.achievement-panel--teal .achievement-panel__check {
-  color: var(--accent-teal);
+.achievement-panel__check {
+  color: var(--shade-600);
 }
 
 /* Languages — proficiency bars */
@@ -1495,7 +1361,7 @@ body.nav-open .md-drawer:not([hidden]) {
 .lang-skill__pct {
   font-size: 0.8rem;
   font-weight: 700;
-  color: var(--accent-violet);
+  color: var(--shade-600);
 }
 
 .lang-skill__track {
@@ -1509,20 +1375,12 @@ body.nav-open .md-drawer:not([hidden]) {
 .lang-skill__bar {
   height: 100%;
   border-radius: var(--md-radius-pill);
-  background: linear-gradient(90deg, var(--accent-blue), var(--accent-violet));
+  background: var(--bar-gradient);
   transition: width 0.8s ease;
 }
 
-.lang-skill:nth-child(2) .lang-skill__bar {
-  background: linear-gradient(90deg, var(--accent-teal), #34d399);
-}
-
-.lang-skill:nth-child(3) .lang-skill__bar {
-  background: linear-gradient(90deg, var(--accent-amber), #fbbf24);
-}
-
-.lang-skill:nth-child(4) .lang-skill__bar {
-  background: linear-gradient(90deg, var(--accent-rose), #fb7185);
+.lang-skill:nth-child(even) .lang-skill__bar {
+  background: linear-gradient(90deg, var(--shade-800), var(--shade-600));
 }
 
 .lang-skill__level {
@@ -1551,8 +1409,8 @@ body.nav-open .md-drawer:not([hidden]) {
   padding: 0.55rem;
   border-radius: var(--md-radius-md);
   font-size: 1.35rem;
-  background: linear-gradient(135deg, #e8f0fe, #f3e8ff);
-  color: var(--accent-violet);
+  background: var(--shade-100);
+  color: var(--md-primary);
 }
 
 .contact-unified__label {
